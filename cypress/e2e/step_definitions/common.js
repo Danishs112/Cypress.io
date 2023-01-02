@@ -4,9 +4,9 @@ import LoginPage from '../../pageObject/login';
 
 const loginPage = new LoginPage();
 
-Given("I am on the login page", () => {
+Given("I am on the {string} page", (page) => {
     try {
-        loginPage.visit();
+        loginPage.visit(page);
         cy.log('user is on the login page');
     }
     catch (error) {
@@ -52,4 +52,3 @@ Given("I login to the dashboard with {string} credentials", (user) => {
     }
 
 });
-

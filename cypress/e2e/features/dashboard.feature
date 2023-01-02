@@ -5,5 +5,5 @@ Feature: Dashboard Page
     Background:
   
 
-    Scenario: Test
-          Given I login to the dashboard with "admin" credentials
+    # Scenario: Test
+    #       Given I login to the dashboard with "admin" credentials

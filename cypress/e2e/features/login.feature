@@ -3,7 +3,7 @@ Feature: Login page
     As a tester, I want to test the "https://admin-demo.nopcommerce.com/" application login page
 
     Background:
-        Given I am on the login page
+        Given I am on the "login" page
 
     Scenario: Checking the visibility of heading and subheading on the page
        Then I should see "Admin area demo" heading on the page

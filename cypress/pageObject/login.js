@@ -5,6 +5,7 @@ import Decryption from "../utilities/decryption";
 import WebTextBox from '../ui/webTextBox';
 import WebButton from "../ui/webButton";
 import WebXpath from "../ui/webXpath";
+import Url from '../urls/url.json'
 
 const generic = new GenericActions();
 const login = new LoginPageLocators();
@@ -17,8 +18,8 @@ const webXpath = new WebXpath();
 class LoginPage {
 
 
-    visit() {
-        generic.visit();
+    visit(page) {
+        generic.visit(Url[page]);
     }
 
     checkVisibilityOfHeading(heading) {

@@ -1,4 +1,4 @@
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import LoginPage from '../../pageObject/login.js'
 
 const login = new LoginPage();
@@ -41,10 +41,10 @@ When("I fill {string} email on the email input field", (email) => {
 When("I fill {string} password on the password input field", (password) => {
   try {
     login.typePasswordOnPasswordInputField(password)
-    cy.log(`user is able to fill ${email} on the password input field`);
+    cy.log(`user is able to fill ${password} on the password input field`);
   }
   catch (error) {
-    cy.log(`user is not able to fill ${email} on the password input field`);
+    cy.log(`user is not able to fill ${password} on the password input field`);
     throw error;
   }
 });

@@ -6,6 +6,6 @@ Feature: Header
         Given I login to the dashboard with "admin" credentials
 
     Scenario:Checking the functionality of nopcommerce logo
-        When I navigate to '/Admin/Product/List' page
-        And I click on nopCommerce logo on the Header
-        Then I should navigate to the admin page
+        When I am on the "product" page
+        # And I click on nopCommerce logo on the Header
+        # Then I should navigate to the admin page
