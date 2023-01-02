@@ -1,10 +1,10 @@
 import LoginPageLocators from "../pages/loginPageLocators";
 import GenericActions from "../utilities/genericActions";
-import WebText from '../helpers/webText';
+import WebText from '../ui/webText';
 import Decryption from "../utilities/decryption";
-import WebTextBox from '../helpers/webTextBox';
-import WebButton from "../helpers/webButton";
-import WebXpath from "../helpers/webXpath";
+import WebTextBox from '../ui/webTextBox';
+import WebButton from "../ui/webButton";
+import WebXpath from "../ui/webXpath";
 
 const generic = new GenericActions();
 const login = new LoginPageLocators();
@@ -56,7 +56,7 @@ class LoginPage {
         webXpath.shouldContainTextByXpath("visibleText", string)
     }
 
-    iloginWithAdminCredentials(user) {
+    iloginWithUserCredentials(user) {
 
         generic.visit();
         let decodedEmail = decode.getDecodedString(`${user}_email`);

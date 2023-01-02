@@ -4,11 +4,11 @@ class WebXpath {
         
         let xpathString = '';
 
-        if(type === 'name' || type === 'id' || type === 'class'){
-            xpathString = `//*[contains(@${type},'${word}')]`
-        }
-        else if(type === 'visibleText'){
+        if(type === 'visibleText'){
             xpathString = `//*[contains(text(),'${word}')]`
+        }
+        else{
+            xpathString = `//*[contains(@${type},'${word}')]`
         }
 
         return xpathString;
@@ -34,7 +34,7 @@ class WebXpath {
 
     shouldContainTextByXpath(type,text) {
         let getXpathValue = this.setXpathValue(type,text);
-        cy.xpath(getXpathValue).should('contain', text).then(function (text) {
+        cy.xpath(getXpathValue).should('be.visible').then(function (text) {
             cy.log("The element is have: " + text);
 
         }, function (err) {

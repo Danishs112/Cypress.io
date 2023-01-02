@@ -1,4 +1,4 @@
-class WebElement {
+class GenericHelpers {
   
     elementCount(element) {
 
@@ -136,4 +136,4 @@ class WebElement {
 
 }
 
-export default WebElement
+export default GenericHelpers;
